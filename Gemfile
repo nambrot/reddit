@@ -43,3 +43,11 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Some gems for presentation and debugging
+gem 'zurb-foundation'
+gem 'bourbon'
+gem 'simple_form'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'hirb'
