@@ -12,7 +12,7 @@
     </div>
     <div class="large-11 columns">
       <span class="subtitle">
-        submitted by <%= submission.user.username %> <%= time_ago_in_words submission.created_at %> ago
+        submitted by <%= link_to submission.user.username, profile_path(submission.user.username) %> <%= time_ago_in_words submission.created_at %> ago
         <%= link_to submission.comments.count.to_s + " comments", submission %>
       </span>
       
@@ -30,7 +30,7 @@
     <% for comment in @user.comments %>
       <div class="large-12 columns comment">
         <div class="large-12 columns comment-meta">
-          <span class="user"><%= comment.user.username %></span> <%= time_ago_in_words comment.created_at %> ago on <%= link_to comment.submission.title, submission_path(comment.submission) %>
+          <span class="user"><%= link_to comment.user.username, profile_path(comment.user.username) %></span> <%= time_ago_in_words comment.created_at %> ago on <%= link_to comment.submission.title, submission_path(comment.submission) %>
         </div>
         <div class="large-12 columns comment-body">
           <%= comment.text %>    

@@ -10,7 +10,7 @@ Reddit::Application.routes.draw do
     resources :comments
   end
   root 'submissions#index'
-  get ':username' => 'profiles#show'
+  get ':username' => 'profiles#show', :as => :profile
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

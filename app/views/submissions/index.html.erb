@@ -10,7 +10,7 @@
     </div>
     <div class="large-11 columns">
       <span class="subtitle">
-        submitted by <%= submission.user.username %> <%= time_ago_in_words submission.created_at %> ago
+        submitted by <%= link_to submission.user.username, profile_path(submission.user.username) %> <%= time_ago_in_words submission.created_at %> ago
         <%= link_to submission.comments.count.to_s + " comments", submission %>
       </span>
       
