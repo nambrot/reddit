@@ -37,6 +37,23 @@
       </div>
       
     </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <% if flash[:error] %>
+          <%= content_tag :div, :id => "flash_name", :class => "alert-box error" do %>
+            <%= flash[:error] %>
+            <a class="close">x</a>
+          <% end %>
+        <% end %>
+
+        <% if flash[:notice] %>
+          <%= content_tag :div, :id => "flash_name", :class => "alert-box success" do %>
+            <%= flash[:notice] %>
+            <a class="close">x</a>
+          <% end %>
+        <% end %>
+      </div><!-- //.twelve.columns -->
+    </div><!-- //.row -->
     <div class="row" id="container">
       <div class="large-12 columns">
         <%= yield %>
