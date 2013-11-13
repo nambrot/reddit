@@ -1,6 +1,7 @@
 class Submission < ActiveRecord::Base
   belongs_to :user
-
+  has_many :comments
+  
   validates :link, format: URI::regexp(%w(http https)), presence: true
   validates :title, presence: true
   validates :user, presence: true
