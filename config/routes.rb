@@ -1,4 +1,5 @@
 Reddit::Application.routes.draw do
+  get "profiles/show"
   get "comments/new"
   get "comments/create"
   devise_for :users
@@ -9,6 +10,7 @@ Reddit::Application.routes.draw do
     resources :comments
   end
   root 'submissions#index'
+  get ':username' => 'profiles#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
