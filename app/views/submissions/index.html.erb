@@ -1,9 +1,9 @@
 <% @submissions.each do |submission| %>
   <div class="submission_index row">
     <div class="vote_count large-1 columns">
-      <img src="" alt="" class="upvote-arrow">
+      <%= link_to "", submission_upvote_path(submission), class: "upvote-arrow" %>
       <span class="vote-count"><%= submission.votes %></span>
-      <img src="" alt="" class="downvote-arrow">
+      <%= link_to "", submission_downvote_path(submission), class: "downvote-arrow" %>
     </div>
     <div class="large-11 columns">
       <%= link_to submission.title, submission.link, class: 'submission_link' %>

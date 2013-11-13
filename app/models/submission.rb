@@ -7,4 +7,14 @@ class Submission < ActiveRecord::Base
 
   # if we want to constrain the length
   # validates :title, length: {in: 6..10}
+
+  def upvote
+    self.votes += 1
+    self.save
+  end
+
+  def downvote
+    self.votes -= 1
+    self.save
+  end
 end

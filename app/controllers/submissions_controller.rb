@@ -61,6 +61,18 @@ class SubmissionsController < ApplicationController
     end
   end
 
+  def upvote
+    @submission = Submission.find(params[:submission_id])
+    @submission.upvote
+    redirect_to :back
+  end
+
+  def downvote
+    @submission = Submission.find(params[:submission_id])
+    @submission.downvote
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_submission
