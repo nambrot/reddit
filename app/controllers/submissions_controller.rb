@@ -24,7 +24,7 @@ class SubmissionsController < ApplicationController
   # POST /submissions
   # POST /submissions.json
   def create
-    @submission = Submission.new(submission_params)
+    @submission = current_user.submissions.new(submission_params)
 
     respond_to do |format|
       if @submission.save

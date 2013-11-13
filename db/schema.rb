@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131113050501) do
+ActiveRecord::Schema.define(version: 20131113065213) do
 
   create_table "submissions", force: true do |t|
     t.string   "link"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(version: 20131113050501) do
     t.integer  "votes",      default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "submissions", ["user_id"], name: "index_submissions_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -10,7 +10,7 @@
     </div>
     <div class="large-11 columns">
       <span class="subtitle">
-        submitted <%= time_ago_in_words submission.created_at %> ago
+        submitted by <%= submission.user.username %> <%= time_ago_in_words submission.created_at %> ago
       </span>
       
     </div>

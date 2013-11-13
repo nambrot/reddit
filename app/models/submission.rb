@@ -1,7 +1,9 @@
 class Submission < ActiveRecord::Base
+  belongs_to :user
+
   validates :link, format: URI::regexp(%w(http https)), presence: true
   validates :title, presence: true
-
+  validates :user, presence: true
   # if we want links to be unique
   # validates :link, uniqueness: true
 
