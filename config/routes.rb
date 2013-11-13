@@ -1,4 +1,5 @@
 Reddit::Application.routes.draw do
+  devise_for :users
   resources :submissions do
     get 'upvote'
     get 'downvote'

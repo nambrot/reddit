@@ -26,6 +26,12 @@
         <header id="global-header">
           <a href="/" id="reddit-header" title="">reddit.com</a>
             <ul id="nav-links">
+              <% if current_user %>
+                <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign In", new_user_session_path %></li>
+                <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <% end %>
             </ul>
         </header>
       </div>

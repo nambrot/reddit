@@ -55,3 +55,6 @@ gem 'hirb'
 # Set up our application for Heroku
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
+
+# Add our user system
+gem 'devise'
