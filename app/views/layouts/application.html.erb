@@ -21,8 +21,22 @@
   </head>
 
   <body>
-
-    <%= yield %>
+    <div class="row">
+      <div class="large-12 columns">
+        <header id="global-header">
+          <a href="/" id="reddit-header" title="">reddit.com</a>
+            <ul id="nav-links">
+            </ul>
+        </header>
+      </div>
+      
+    </div>
+    <div class="row" id="container">
+      <div class="large-12 columns">
+        <%= yield %>
+      </div>
+    </div>
+    
 
     
     <%= javascript_include_tag "application" %>

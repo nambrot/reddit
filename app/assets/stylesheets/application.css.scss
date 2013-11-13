@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require foundation_and_overrides
+ *= require_self
+ *= require_tree .
+ */
+ 
+#reddit-header {
+  text-indent: -9999px;
+  background-image: url(http://www.redditstatic.com/sprite-reddit.hV9obzo72Pc.png);
+  background-position: 0px -313px;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 120px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 3px;
+}
+
+#global-header {
+  height: 50px;
+  background-color: #C3DAF6;
+  
+  & > a {
+    vertical-align: top;
+  }
+
+  #nav-links {
+    margin-top: 20px;
+    list-style-type: none;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+
+    li {
+      display: inline-block;
+      font-weight: bold;
+      margin: 0px 3px;
+      height: 30px;
+      color: #369;
+      padding: 2px 6px 0 6px;
+      background-color: #eff7ff;
+    }
+  }
+}
