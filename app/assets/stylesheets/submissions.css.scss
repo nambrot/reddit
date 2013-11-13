@@ -1,3 +1,42 @@
 // Place all the styles related to the submissions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.submission_index {
+  padding: 10px 20px;
+}
+
+.submission_link {
+    color: blue;
+    font-size: 26px;
+    padding-bottom: 12px;
+  }
+
+.subtitle {
+  color: #525252;
+  font-size: 12px;
+}
+
+.vote_count {
+  text-align: center;
+}
+
+.vote_count .upvote-arrow {
+  background-image: url(http://www.redditstatic.com/sprite-reddit.hV9obzo72Pc.png);
+  background-position: -63px -796px;
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.vote_count .downvote-arrow {
+  background-image: url(http://www.redditstatic.com/sprite-reddit.hV9obzo72Pc.png);
+  background-position: -21px -796px;
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 14px;
+  display: block;
+  margin: 0 auto;
+}

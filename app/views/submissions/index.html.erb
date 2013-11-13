@@ -1,31 +1,22 @@
-<h1>Listing submissions</h1>
+<% @submissions.each do |submission| %>
+  <div class="submission_index row">
+    <div class="vote_count large-1 columns">
+      <img src="" alt="" class="upvote-arrow">
+      <span class="vote-count"><%= submission.votes %></span>
+      <img src="" alt="" class="downvote-arrow">
+    </div>
+    <div class="large-11 columns">
+      <%= link_to submission.title, submission.link, class: 'submission_link' %>
+    </div>
+    <div class="large-11 columns">
+      <span class="subtitle">
+        submitted <%= time_ago_in_words submission.created_at %> ago
+      </span>
+      
+    </div>
+    
+  </div>
+  
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Link</th>
-      <th>Title</th>
-      <th>Votes</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @submissions.each do |submission| %>
-      <tr>
-        <td><%= submission.link %></td>
-        <td><%= submission.title %></td>
-        <td><%= submission.votes %></td>
-        <td><%= link_to 'Show', submission %></td>
-        <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
-        <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Submission', new_submission_path %>
+<%= link_to 'New Submission', new_submission_path, class: 'button' %>
