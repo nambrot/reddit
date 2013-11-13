@@ -1,8 +1,12 @@
 Reddit::Application.routes.draw do
+  get "comments/new"
+  get "comments/create"
   devise_for :users
   resources :submissions do
     get 'upvote'
     get 'downvote'
+
+    resources :comments
   end
   root 'submissions#index'
   # The priority is based upon order of creation: first created -> highest priority.
